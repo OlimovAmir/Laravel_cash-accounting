@@ -19,7 +19,7 @@ return new class extends Migration
 
             // Связываем поле "item_of_expenditure" с таблицей "item_of_expenditure"
             $table->unsignedBigInteger('item_id');
-            $table->foreign('item_id')->references('id')->on('item_of_expenditure');
+            $table->foreign('item_id')->references('id')->on('item_of_expenditures');
 
             $table->double('summ', 15, 2);
             $table->string('document');
