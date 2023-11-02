@@ -45,8 +45,19 @@
                                 <li class="nav-item">
                                     <a class="nav-link disabled" aria-disabled="true">Disabled</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" aria-disabled="true">Бухгалтерия</a>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Бухгалтерия
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Расход</a></li>
+                                        <li><a class="dropdown-item" href="#">Приход</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    </ul>
                                 </li>
                             </ul>
                             <form class="d-flex" role="search">
