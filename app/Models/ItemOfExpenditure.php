@@ -20,4 +20,9 @@ class ItemOfExpenditure extends Model
     {
         return $this->belongsTo(ContractorsForExpenses::class);
     }
+
+    public function employees()
+    {
+        return $this->belongsTo(Employee::class);
+    }
 }
