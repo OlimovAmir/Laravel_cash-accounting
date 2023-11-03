@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="mb-3">
-    <h2>Расходный кассовый ордер</h2>
+    <h2>Приходный кассовый ордер</h2>
     <div class="row">
         <div class="col-3 mb-2">
             <input type="number" placeholder="Номер документа">
@@ -17,7 +17,7 @@
 </div>
 <div class="row mb-2">
     <div class="col-6">
-        <input type="text" placeholder="Кому" style="width: 80%">
+        <input type="text" placeholder="От кого" style="width: 80%">
     </div>
    
 </div>
@@ -26,11 +26,11 @@
         <input type="text" placeholder="Основание" style="width: 80%">
     </div>
     <div class="col-6">
-        <span> Статья расходов </span> 
+        <span> Статья дохода </span> 
         <select>
             <option value="">Контрагенты</option>
-            <option value="">Зарплата</option>
-            <option value="">Налоги</option>
+            <option value="">Подотчетники</option>
+            <option value="">Прочие</option>
         </select>
     </div>
 </div>
@@ -40,6 +40,4 @@
     </div>
    
 </div>
-
-
 @endsection
