@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\CashController;
+use App\Http\Controllers\ContragentController;
+use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\ExpensesController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -31,6 +33,8 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/formExpenses', [ExpensesController::class,'index']);
     Route::get('/formCash', [CashController::class,'index']);
+    Route::get('/formEmployee', [EmployeeController::class,'index']);
+    Route::get('/formContragent', [ContragentController::class,'index']);
 });
 
 require __DIR__.'/auth.php';

@@ -40,6 +40,6 @@
     </div>
    
 </div>
-
+<button type="button" class="btn btn-info">Провести</button>
 
 @endsection

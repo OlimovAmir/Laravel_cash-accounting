@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href={{ asset('css/app.scss') }}>
-    <title>Document</title>
+    <title>Prog</title>
 </head>
 <body>
     <x-app-layout>
         <x-slot name="header">
-            <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+            <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-100 leading-tight">
                 <nav class="navbar navbar-expand-lg bg-body-tertiary">
                     <div class="container-fluid">
                         <a class="navbar-brand" href="#">Navbar</a>
@@ -43,16 +43,34 @@
                                     </ul>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                                    <a class="nav-link" aria-disabled="true">Disabled</a>
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                         aria-expanded="false">
-                                        Бухгалтерия
+                                        Отчеты
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Касса</a></li>
+                                        <li><a class="dropdown-item" href="#">Банк</a></li>
+                                        <li><a class="dropdown-item" href="#">Поставщики</a></li>
+                                        <li><a class="dropdown-item" href="#">Подотчётники</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Документы
                                     </a>
                                     <ul class="dropdown-menu">
                                         <li><a class="dropdown-item" href="/formExpenses">Расход</a></li>
                                         <li><a class="dropdown-item" href="/formCash">Приход</a></li>
+                                        <li><a class="dropdown-item" href="/formContragent">Контрагенты</a></li>
+                                        <li><a class="dropdown-item" href="/formEmployee">Сотрудники</a></li>
                                         <li>
                                             <hr class="dropdown-divider">
                                         </li>
@@ -135,5 +153,3 @@
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
-
-
