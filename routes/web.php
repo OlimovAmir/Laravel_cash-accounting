@@ -32,6 +32,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::get('/formExpenses', [ExpensesController::class,'index']);
+    Route::post('/create', [ExpensesController::class,'store'])->name('');
+    
     Route::get('/formCash', [CashController::class,'index']);
     Route::get('/formEmployee', [EmployeeController::class,'index']);
     Route::get('/formContragent', [ContragentController::class,'index']);

@@ -55,6 +55,8 @@
                                         <li><a class="dropdown-item" href="#">Банк</a></li>
                                         <li><a class="dropdown-item" href="#">Поставщики</a></li>
                                         <li><a class="dropdown-item" href="#">Подотчётники</a></li>
+                                        <li><a class="dropdown-item" href="#">Авансовы отчет</a></li>
+                                        <li><a class="dropdown-item" href="#">Склад</a></li>
                                         <li>
                                             <hr class="dropdown-divider">
                                         </li>
@@ -67,10 +69,14 @@
                                         Документы
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="/formExpenses">Расход</a></li>
-                                        <li><a class="dropdown-item" href="/formCash">Приход</a></li>
+                                        <li><a class="dropdown-item" href="/formExpenses">Расход касса</a></li>
+                                        <li><a class="dropdown-item" href="/formCash">Приход касса</a></li>
                                         <li><a class="dropdown-item" href="/formContragent">Контрагенты</a></li>
                                         <li><a class="dropdown-item" href="/formEmployee">Сотрудники</a></li>
+                                        <li><a class="dropdown-item" href="#">Номенклатура</a></li>
+                                        <li><a class="dropdown-item" href="#">Приходный накладной</a></li>
+                                        <li><a class="dropdown-item" href="#">Расходный накладной</a></li>
+                                        <li><a class="dropdown-item" href="#">Форма Авансового отчета</a></li>
                                         <li>
                                             <hr class="dropdown-divider">
                                         </li>

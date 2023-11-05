@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\Expenses\StoreRequest;
 use App\Models\Expenses;
 use Illuminate\Http\Request;
 
@@ -26,9 +27,20 @@ class ExpensesController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreRequest $storeRequest)
     {
-        //
+        try {
+            $expense = Expenses::create($storeRequest->all());
+    
+            if ($expense) {
+                return redirect('/')->with('success', 'Запись успешно добавлена.');
+            } else {
+                return redirect('/')->with('error', 'Запись не добавлена.');
+            }
+        } catch (\Exception $e) {
+            // В случае возникновения исключения, например, ошибки валидации, можно также выдать сообщение об ошибке.
+            return redirect('/')->with('error', 'Запись не добавлена: ' . $e->getMessage());
+        }
     }
 
     /**
