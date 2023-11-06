@@ -1,0 +1,53 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "My Doc API",
+        "description": "Описание API",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/": {},
+        "/api/units": {
+            "get": {
+                "tags": [
+                    "Unit"
+                ],
+                "summary": "GET units",
+                "operationId": "bc959958829be9785eeaff714b886370",
+                "responses": {
+                    "200": {
+                        "description": "Успешный ответ",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "properties": {
+                                                    "id": {
+                                                        "type": "integer",
+                                                        "example": 1
+                                                    },
+                                                    "title": {
+                                                        "type": "string",
+                                                        "example": "Some name"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            }
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Ресурс не найден"
+                    }
+                }
+            }
+        }
+    }
+}
