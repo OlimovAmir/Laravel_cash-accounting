@@ -40,6 +40,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/formContragent', [ContragentController::class,'index']);
 
     Route::get('/formUnit', [UnitController::class,'formUnit']);
+    Route::post('/save-unit', [UnitController::class,'saveUnit']);
 });
 
 require __DIR__.'/auth.php';

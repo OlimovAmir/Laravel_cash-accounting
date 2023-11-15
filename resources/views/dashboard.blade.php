@@ -74,7 +74,7 @@
                                         <li><a class="dropdown-item" href="/formContragent">Контрагенты</a></li>
                                         <li><a class="dropdown-item" href="/formEmployee">Сотрудники</a></li>
                                         <li><a class="dropdown-item" href="#">Номенклатура</a></li>
-                                        <li><a class="dropdown-item" href="#">Единица измерения</a></li>
+                                        <li><a class="dropdown-item" href="/formUnit">Единица измерения</a></li>
                                         <li><a class="dropdown-item" href="#">Приходный накладной</a></li>
                                         <li><a class="dropdown-item" href="#">Расходный накладной</a></li>
                                         <li><a class="dropdown-item" href="#">Форма Авансового отчета</a></li>

@@ -45,6 +45,17 @@ class UnitController extends Controller
     {
         return view('forms.unit');
     }
+
+    public function saveUnit(Request $request)
+    {
+        $unit = new Unit();
+        $unit->name = $request->input('unit');
+        $unit->save();
+        return redirect('/formUnit')->with('message', 'Запись произведена');
+    }
+
+
+
     public function index()
     {
         $units = Unit::all();
