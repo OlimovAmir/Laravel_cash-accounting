@@ -3,16 +3,22 @@
 @section('content')
 
 <div class="mb-3">
-    <div> <h2 class="h4" >Форма добавление нового контрагента</h2> </div>
-    <form>
-        <input type="text" placeholder="Наименование"/>
-        <input type="number" placeholder="ИНН"/>
-        <input type="text" placeholder="Адресс"/>
-        <input type="phone" placeholder="Телефон"/>
-        <input type="email" placeholder="Email"/>
-        
+    <div class="titleContragent"> Форма добавление нового контрагента </div>
+    <form action="/save-contragent" method="POST">
+        @csrf
+        <input type="text" name="name" placeholder="Наименование" />
+        <input type="number" name="inn" placeholder="ИНН" />
+        <input type="text" name="adress" placeholder="Адресс" />
+        <input type="phone" name="phone" placeholder="Телефон" />
+        <input type="email" name="email" placeholder="Email" />
+        <button type="submit" class="btn btn-info">Записать</button>
     </form>
-    <button type="button" class="btn btn-info">Записать</button>
-</div>
+    
 
+</div>
+@if(session('message'))
+<div class="alert alert-success">
+    {{ session('message') }}
+</div>
+@endif
 @endsection

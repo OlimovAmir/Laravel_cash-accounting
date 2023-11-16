@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Contragent extends Model
 {
     use HasFactory;
+
+    protected $guarded = true;
+
+    protected $table = 'contragents';
+
+    protected $fillable = ['name', 'inn', 'address', 'phone', 'email'];
 }

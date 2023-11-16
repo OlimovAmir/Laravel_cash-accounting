@@ -7,6 +7,28 @@ use Illuminate\Http\Request;
 
 class ContragentController extends Controller
 {
+
+    public function saveContragent(Request $request)
+    {
+        $contragent = new Contragent();
+        $contragent->name = $request->input('name');
+        $contragent->inn = $request->input('inn');
+        $contragent->adress = $request->input('adress');
+        $contragent->phone = $request->input('phone');
+        $contragent->email = $request->input('email');
+        $contragent->save();
+
+        return redirect('/formContragent')->with('message', 'Запись произведена');
+    }
+
+    public function showData()
+    {
+        $dataContragent = Contragent::all();
+        return view('forms.contragent', ['data' => $dataContragent]);
+    }
+
+
+
     /**
      * Display a listing of the resource.
      */

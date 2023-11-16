@@ -17,10 +17,15 @@
         </div>
         <div class="list">
             <h1 class="titleListUnit" >Наименование  из таблицы</h1>
-            <ul>
-                @foreach($data as $item)
-                <p></p>
-                <span>{{ $item->id }} ) {{ $item->name }}</span>
+            <ul class="wrapperListUnit">
+                
+                    @foreach($data as $item)
+                    <div class="listUnit">
+                        <span>{{ $item->id }} ) {{ $item->name }}</span>
+                    </div>
+                
+               
+                
                 @endforeach
             </ul>
         </div>

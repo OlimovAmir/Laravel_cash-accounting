@@ -46,6 +46,9 @@ Route::middleware('auth')->group(function () {
         return view('forms.unit', ['data' => $data]);
     });
     Route::post('/save-unit', [UnitController::class,'saveUnit']);
+
+    Route::post('/save-contragent', [ContragentController::class,'saveContragent']);
+    
 });
 
 require __DIR__.'/auth.php';
