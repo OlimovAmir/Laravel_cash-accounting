@@ -6,6 +6,7 @@ use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\ExpensesController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UnitController;
+use App\Models\Unit;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -40,6 +41,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/formContragent', [ContragentController::class,'index']);
 
     Route::get('/formUnit', [UnitController::class,'formUnit']);
+    Route::get('/formUnit', function () {
+        $data = Unit::all();
+        return view('forms.unit', ['data' => $data]);
+    });
     Route::post('/save-unit', [UnitController::class,'saveUnit']);
 });
 

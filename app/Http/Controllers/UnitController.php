@@ -54,6 +54,11 @@ class UnitController extends Controller
         return redirect('/formUnit')->with('message', 'Запись произведена');
     }
 
+    public function showData()
+    {
+        $data = Unit::all();
+        return view('forms.unit', ['data' => $data]);
+    }
 
 
     public function index()
