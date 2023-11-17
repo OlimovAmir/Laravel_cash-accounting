@@ -74,6 +74,7 @@
                                         <li><a class="dropdown-item" href="/formCash">Приход касса</a></li>
                                         <li><a class="dropdown-item" href="/formContragent">Контрагенты</a></li>
                                         <li><a class="dropdown-item" href="/formEmployee">Сотрудники</a></li>
+                                        <li><a class="dropdown-item" href="/formStore">Склад</a></li>
                                         <li><a class="dropdown-item" href="#">Номенклатура</a></li>
                                         <li><a class="dropdown-item" href="/formUnit">Единица измерения</a></li>
                                         <li><a class="dropdown-item" href="#">Приходный накладной</a></li>

@@ -5,7 +5,9 @@ use App\Http\Controllers\ContragentController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\ExpensesController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\StoreController;
 use App\Http\Controllers\UnitController;
+use App\Models\Store;
 use App\Models\Unit;
 use Illuminate\Support\Facades\Route;
 
@@ -48,6 +50,13 @@ Route::middleware('auth')->group(function () {
     Route::post('/save-unit', [UnitController::class,'saveUnit']);
 
     Route::post('/save-contragent', [ContragentController::class,'saveContragent']);
+
+    Route::get('/formStore', [StoreController::class,'formStore']);
+    Route::post('/save-store', [StoreController::class,'saveStore']);
+    Route::get('/formStore', function () {
+        $dataStore = Store::all();
+        return view('forms.store', ['dataStore' => $dataStore]);
+    });
     
 });
 

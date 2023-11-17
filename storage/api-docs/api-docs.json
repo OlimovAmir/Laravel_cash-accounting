@@ -7,6 +7,52 @@
     },
     "paths": {
         "/api/": {},
+        "/api/stores": {
+            "get": {
+                "tags": [
+                    "Store"
+                ],
+                "summary": "GET stores",
+                "operationId": "789854b8f9730d47f1ba52ca5e610238",
+                "responses": {
+                    "200": {
+                        "description": "Успешный ответ",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "properties": {
+                                                    "id": {
+                                                        "type": "integer",
+                                                        "example": 1
+                                                    },
+                                                    "number": {
+                                                        "type": "integer",
+                                                        "example": 1
+                                                    },
+                                                    "name": {
+                                                        "type": "string",
+                                                        "example": "Some name"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            }
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Ресурс не найден"
+                    }
+                }
+            }
+        },
         "/api/units": {
             "get": {
                 "tags": [
