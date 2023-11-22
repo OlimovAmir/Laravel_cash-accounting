@@ -2,11 +2,13 @@
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
+            
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
                         <x-application-logo class="block h-9 w-auto fill-current text-gray-800 dark:text-gray-200" />
+                        
                     </a>
                 </div>
 
@@ -14,9 +16,31 @@
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard ') }}
+                        
+                        
                     </x-nav-link>
+                    
+                    
                 </div>
             
+            </div>
+            <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Отчеты
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Касса</a></li>
+                    <li><a class="dropdown-item" href="#">Банк</a></li>
+                    <li><a class="dropdown-item" href="#">Поставщики</a></li>
+                    <li><a class="dropdown-item" href="#">Подотчётники</a></li>
+                    <li><a class="dropdown-item" href="#">Авансовы отчет</a></li>
+                    <li><a class="dropdown-item" href="#">Склад</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
             </div>
 
             <!-- Settings Dropdown -->
